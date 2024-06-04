@@ -1,6 +1,6 @@
 package service
 
-import "github.com/aerospike/backup/pkg/model"
+import "github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 
 type StorageAccessor interface {
 	// readBackupState reads backup state for a backup.

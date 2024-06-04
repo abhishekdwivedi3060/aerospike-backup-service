@@ -25,7 +25,7 @@ import (
 
 	"log/slog"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 )
 
 // RestoreShared implements the Restore interface.

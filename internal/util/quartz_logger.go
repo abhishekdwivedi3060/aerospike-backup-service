@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/aerospike/backup/pkg/util"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/util"
 	"github.com/reugn/go-quartz/logger"
 	"github.com/reugn/go-quartz/quartz"
 )

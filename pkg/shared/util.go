@@ -29,7 +29,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 )
 
 func setCString(cchar **C.char, str *string) {

@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 	"github.com/reugn/go-quartz/quartz"
 )
 

@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/aerospike/backup/pkg/model"
-	"github.com/aerospike/backup/pkg/service"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/service"
 )
 
 var ConfigurationManager service.ConfigurationManager

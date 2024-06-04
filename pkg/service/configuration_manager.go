@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 	"gopkg.in/yaml.v3"
 )
 

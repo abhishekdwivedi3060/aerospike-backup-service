@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aerospike/backup/pkg/model"
-	pkgutil "github.com/aerospike/backup/pkg/util"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
+	pkgutil "github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/util"
 	"gopkg.in/natefinch/lumberjack.v2"
 )
 

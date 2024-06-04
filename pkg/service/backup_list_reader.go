@@ -1,6 +1,6 @@
 package service
 
-import "github.com/aerospike/backup/pkg/model"
+import "github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 
 // BackupListReader allows to read list of existing backups
 type BackupListReader interface {
