@@ -21,7 +21,7 @@ import (
 // AerospikeCluster represents the configuration for an Aerospike cluster for backup.
 // @Description AerospikeCluster represents the configuration for an Aerospike cluster for backup.
 type AerospikeCluster struct {
-	pwd atomic.Pointer[string]
+	pwd atomic.Pointer[string] `json:",inline"`
 	// The cluster name.
 	ClusterLabel *string `yaml:"label,omitempty" json:"label,omitempty" example:"testCluster"`
 	// The seed nodes details.
