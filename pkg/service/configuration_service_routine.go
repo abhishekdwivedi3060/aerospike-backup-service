@@ -3,7 +3,7 @@ package service
 import (
 	"fmt"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 )
 
 // AddRoutine

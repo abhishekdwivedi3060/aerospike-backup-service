@@ -5,7 +5,7 @@ package service
 import (
 	"testing"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 )
 
 func Test(t *testing.T) {

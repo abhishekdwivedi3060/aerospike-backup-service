@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"sync"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 )
 
 type JobsHolder struct {

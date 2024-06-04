@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aerospike/backup/pkg/model"
-	"github.com/aerospike/backup/pkg/util"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/util"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"

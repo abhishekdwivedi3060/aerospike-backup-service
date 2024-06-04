@@ -9,8 +9,8 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/aerospike/backup/pkg/model"
-	"github.com/aerospike/backup/pkg/service"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/service"
 	"github.com/reugn/go-quartz/quartz"
 	"golang.org/x/time/rate"
 )

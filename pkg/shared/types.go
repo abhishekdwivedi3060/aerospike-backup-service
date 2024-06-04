@@ -3,7 +3,7 @@ package shared
 import (
 	"time"
 
-	"github.com/aerospike/backup/pkg/model"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/model"
 )
 
 // BackupOptions provides additional properties for running a backup.

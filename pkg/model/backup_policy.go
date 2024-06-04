@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/aerospike/backup/pkg/util"
+	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/util"
 )
 
 const (
