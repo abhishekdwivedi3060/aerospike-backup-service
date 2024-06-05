@@ -65,7 +65,6 @@ func (c *AerospikeCluster) GetUser() *string {
 // and try to read again next time.
 func (c *AerospikeCluster) GetPassword() *string {
 	if c.Credentials != nil && c.Credentials.Password != nil {
-		c.pwd.Store(c.Credentials.Password)
 		return c.Credentials.Password
 	}
 
