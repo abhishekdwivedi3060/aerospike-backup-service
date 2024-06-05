@@ -11,7 +11,6 @@ import (
 	"log/slog"
 	"os"
 	"strings"
-	"sync/atomic"
 	"time"
 
 	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/util"
@@ -21,7 +20,6 @@ import (
 // AerospikeCluster represents the configuration for an Aerospike cluster for backup.
 // @Description AerospikeCluster represents the configuration for an Aerospike cluster for backup.
 type AerospikeCluster struct {
-	pwd atomic.Pointer[string] `json:",inline"`
 	// The cluster name.
 	ClusterLabel *string `yaml:"label,omitempty" json:"label,omitempty" example:"testCluster"`
 	// The seed nodes details.
@@ -66,10 +64,6 @@ func (c *AerospikeCluster) GetUser() *string {
 // Returns the password value. If it failed to read password, it will return nil
 // and try to read again next time.
 func (c *AerospikeCluster) GetPassword() *string {
-	if password := c.pwd.Load(); password != nil {
-		return password
-	}
-
 	if c.Credentials != nil && c.Credentials.Password != nil {
 		c.pwd.Store(c.Credentials.Password)
 		return c.Credentials.Password
@@ -88,7 +82,6 @@ func (c *AerospikeCluster) GetPassword() *string {
 
 	slog.Debug("Successfully read password", "path", *c.Credentials.PasswordPath)
 	password := string(data)
-	c.pwd.Store(&password)
 	return &password
 }
 
