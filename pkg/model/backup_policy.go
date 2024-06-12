@@ -3,6 +3,7 @@ package model
 import (
 	"errors"
 	"fmt"
+	lib "github.com/aerospike/aerospike-management-lib"
 
 	"github.com/abhishekdwivedi3060/aerospike-backup-service/pkg/util"
 )
@@ -169,4 +170,9 @@ func (p *BackupPolicy) Validate() error {
 		return err
 	}
 	return nil
+}
+
+func (b *BackupPolicy) DeepCopyInto(out *BackupPolicy) {
+	temp := lib.DeepCopy(b).(*BackupPolicy)
+	*out = *temp
 }

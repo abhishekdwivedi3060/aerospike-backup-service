@@ -2,6 +2,7 @@ package model
 
 import (
 	"fmt"
+	lib "github.com/aerospike/aerospike-management-lib"
 
 	"github.com/reugn/go-quartz/quartz"
 )
@@ -91,4 +92,9 @@ func (r *BackupRoutine) Validate(c *Config) error {
 type Node struct {
 	IP   string `yaml:"ip" json:"ip" example:"192.168.0.2"`
 	Port int    `yaml:"port" json:"port" example:"3000"`
+}
+
+func (b *BackupRoutine) DeepCopyInto(out *BackupRoutine) {
+	temp := lib.DeepCopy(b).(*BackupRoutine)
+	*out = *temp
 }

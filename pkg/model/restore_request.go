@@ -3,6 +3,7 @@ package model
 import (
 	"encoding/json"
 	"errors"
+	lib "github.com/aerospike/aerospike-management-lib"
 )
 
 // RestoreRequest represents a restore operation request.
@@ -100,4 +101,9 @@ func (r *RestoreTimestampRequest) Validate() error {
 		return emptyFieldValidationError(r.Routine)
 	}
 	return nil
+}
+
+func (r *RestoreRequest) DeepCopyInto(out *RestoreRequest) {
+	temp := lib.DeepCopy(r).(*RestoreRequest)
+	*out = *temp
 }

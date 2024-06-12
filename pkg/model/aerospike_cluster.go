@@ -8,6 +8,7 @@ import (
 	"encoding/pem"
 	"errors"
 	"fmt"
+	lib "github.com/aerospike/aerospike-management-lib"
 	"log/slog"
 	"os"
 	"strings"
@@ -313,4 +314,9 @@ func (node *SeedNode) String() string {
 		return fmt.Sprintf("%s:%s:%d", node.HostName, node.TLSName, node.Port)
 	}
 	return fmt.Sprintf("%s:%d", node.HostName, node.Port)
+}
+
+func (a *AerospikeCluster) DeepCopyInto(out *AerospikeCluster) {
+	temp := lib.DeepCopy(a).(*AerospikeCluster)
+	*out = *temp
 }

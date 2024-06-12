@@ -3,6 +3,7 @@ package model
 import (
 	"errors"
 	"fmt"
+	lib "github.com/aerospike/aerospike-management-lib"
 	"slices"
 	"strings"
 
@@ -77,4 +78,9 @@ func (s *Storage) SetDefaultProfile() {
 	if s.Type == S3 && s.S3Profile == nil {
 		s.S3Profile = ptr.String("default")
 	}
+}
+
+func (s *Storage) DeepCopyInto(out *Storage) {
+	temp := lib.DeepCopy(s).(*Storage)
+	*out = *temp
 }
