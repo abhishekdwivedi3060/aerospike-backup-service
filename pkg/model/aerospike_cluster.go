@@ -316,7 +316,17 @@ func (node *SeedNode) String() string {
 	return fmt.Sprintf("%s:%d", node.HostName, node.Port)
 }
 
-func (a *AerospikeCluster) DeepCopyInto(out *AerospikeCluster) {
-	temp := lib.DeepCopy(a).(*AerospikeCluster)
+func (in *AerospikeCluster) DeepCopy() *AerospikeCluster {
+	if in == nil {
+		return nil
+	}
+	out := new(AerospikeCluster)
+	in.DeepCopyInto(out)
+
+	return out
+}
+
+func (in *AerospikeCluster) DeepCopyInto(out *AerospikeCluster) {
+	temp := lib.DeepCopy(in).(*AerospikeCluster)
 	*out = *temp
 }

@@ -103,7 +103,17 @@ func (r *RestoreTimestampRequest) Validate() error {
 	return nil
 }
 
-func (r *RestoreRequest) DeepCopyInto(out *RestoreRequest) {
-	temp := lib.DeepCopy(r).(*RestoreRequest)
+func (in *RestoreRequest) DeepCopy() *RestoreRequest {
+	if in == nil {
+		return nil
+	}
+	out := new(RestoreRequest)
+	in.DeepCopyInto(out)
+
+	return out
+}
+
+func (in *RestoreRequest) DeepCopyInto(out *RestoreRequest) {
+	temp := lib.DeepCopy(in).(*RestoreRequest)
 	*out = *temp
 }

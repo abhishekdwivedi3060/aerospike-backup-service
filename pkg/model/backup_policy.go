@@ -172,7 +172,17 @@ func (p *BackupPolicy) Validate() error {
 	return nil
 }
 
-func (b *BackupPolicy) DeepCopyInto(out *BackupPolicy) {
-	temp := lib.DeepCopy(b).(*BackupPolicy)
+func (in *BackupPolicy) DeepCopy() *BackupPolicy {
+	if in == nil {
+		return nil
+	}
+	out := new(BackupPolicy)
+	in.DeepCopyInto(out)
+
+	return out
+}
+
+func (in *BackupPolicy) DeepCopyInto(out *BackupPolicy) {
+	temp := lib.DeepCopy(in).(*BackupPolicy)
 	*out = *temp
 }

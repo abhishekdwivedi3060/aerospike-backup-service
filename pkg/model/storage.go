@@ -80,7 +80,17 @@ func (s *Storage) SetDefaultProfile() {
 	}
 }
 
-func (s *Storage) DeepCopyInto(out *Storage) {
-	temp := lib.DeepCopy(s).(*Storage)
+func (in *Storage) DeepCopy() *Storage {
+	if in == nil {
+		return nil
+	}
+	out := new(Storage)
+	in.DeepCopyInto(out)
+
+	return out
+}
+
+func (in *Storage) DeepCopyInto(out *Storage) {
+	temp := lib.DeepCopy(in).(*Storage)
 	*out = *temp
 }

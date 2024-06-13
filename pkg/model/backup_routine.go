@@ -94,7 +94,17 @@ type Node struct {
 	Port int    `yaml:"port" json:"port" example:"3000"`
 }
 
-func (b *BackupRoutine) DeepCopyInto(out *BackupRoutine) {
-	temp := lib.DeepCopy(b).(*BackupRoutine)
+func (in *BackupRoutine) DeepCopy() *BackupRoutine {
+	if in == nil {
+		return nil
+	}
+	out := new(BackupRoutine)
+	in.DeepCopyInto(out)
+
+	return out
+}
+
+func (in *BackupRoutine) DeepCopyInto(out *BackupRoutine) {
+	temp := lib.DeepCopy(in).(*BackupRoutine)
 	*out = *temp
 }
